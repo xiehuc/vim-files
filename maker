@@ -1,5 +1,6 @@
 #!/bin/sh
 
+
 if [ -e makefile -o -e Makefile ]; then
     make
 elif [ -e ../makefile -o -e ../Makefile ];then
@@ -10,7 +11,7 @@ while [ `pwd` != $HOME ] && [ `pwd` != / ]; do
 	# Checks if the directory contains a CMakeList.txt and "build" dir.
 	if [ -d build ] && [ -f CMakeLists.txt ]; then
 		cd build
-		make $MAKEOPTS
+		make $*
 		exit $?
 	fi
 	cd .. # go back one dir
