@@ -2,7 +2,7 @@
 # run maker sudo install for install with sudo
 
 SUDO=0
-if [ $1 == "sudo" ]; then
+if [ "$1" == "sudo" ]; then
    shift
    SUDO=1
 fi
