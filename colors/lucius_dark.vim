@@ -69,7 +69,7 @@ hi SpecialKey guifg=#405060 ctermfg=239
 hi Title guifg=#62bdde gui=NONE cterm=NONE ctermfg=74
 hi Cursor guifg=#a3e3ed guibg=bg ctermbg=153 
 "hi Cursor guifg=bg guibg=#a3e3ed ctermbg=153 
-hi CursorIM guifg=bg guibg=#96cdcd ctermbg=116
+hi CursorIM guifg=#96cdcd guibg=bg ctermbg=116
 hi CursorColumn guifg=NONE guibg=#404448 gui=NONE cterm=NONE ctermfg=NONE ctermbg=238
 hi CursorLine guifg=NONE guibg=#404448 gui=NONE cterm=NONE ctermfg=NONE ctermbg=238
 hi Visual guifg=NONE guibg=#364458 ctermfg=NONE ctermbg=238
