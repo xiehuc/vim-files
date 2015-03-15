@@ -92,7 +92,7 @@ hi SpellBad guisp=#ee0000 gui=undercurl cterm=undercurl ctermbg=196
 hi SpellCap guisp=#eeee00 gui=undercurl cterm=undercurl ctermbg=226
 hi SpellRare guisp=#ffa500 gui=undercurl cterm=undercurl ctermbg=214
 hi SpellLocal guisp=#ffa500 gui=undercurl cterm=undercurl ctermbg=214
-hi DiffAdd guifg=#80a090 guibg=#313c36 gui=NONE cterm=NONE ctermfg=108 ctermbg=0
+hi DiffAdd guifg=#80a090 guibg=#313c36 gui=NONE cterm=NONE ctermfg=108 ctermbg=237
 hi DiffChange guifg=NONE guibg=#4a343a gui=NONE cterm=NONE ctermfg=NONE ctermbg=237
 hi DiffDelete guifg=#6c6661 guibg=#3c3631 gui=NONE cterm=NONE ctermfg=241 ctermbg=237
 hi DiffText guifg=#f05060 guibg=#4a343a gui=bold cterm=bold ctermfg=203 ctermbg=237
