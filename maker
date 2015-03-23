@@ -1,35 +1,31 @@
 #!/bin/sh
 # run maker sudo install for install with sudo
 
-SUDO=0
+SUDO=
 if [ "$#" -ge 1 ]; then
-if [ "$1" == "sudo" ]; then
+if [ "$1" = "sudo" ]; then
    shift
-   SUDO=1
+   SUDO=sudo
 fi
 fi
 
 runmake(){
-   if [ $SUDO -eq 1 ]; then
-      sudo make $*
-   else
-      make $*
-   fi
+   $SUDO make $*
 }
 
 if [ -e makefile -o -e Makefile ]; then
    runmake $*
 elif [ -e ../makefile -o -e ../Makefile ]; then
-    cd ..
-    runmake $*
+   cd ..
+   runmake $*
 else
-while [ `pwd` != $HOME ] && [ `pwd` != / ]; do 
-	# Checks if the directory contains a CMakeList.txt and "build" dir.
-	if [ -d build ] && [ -f CMakeLists.txt ]; then
-		cd build
-      runmake $*
-		exit $?
-	fi
-	cd .. # go back one dir
-done
+   while [ `pwd` != $HOME ] && [ `pwd` != / ]; do 
+      # Checks if the directory contains a CMakeList.txt and "build" dir.
+      if [ -d build ] && [ -f CMakeLists.txt ]; then
+         cd build
+         runmake $*
+         exit $?
+      fi
+      cd .. # go back one dir
+   done
 fi
