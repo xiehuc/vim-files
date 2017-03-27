@@ -1,6 +1,6 @@
 #!/bin/sh
 # run maker sudo install for install with sudo
-
+cd $(pwd)
 SUDO=
 if [ "$#" -ge 1 ]; then
 if [ "$1" = "sudo" ]; then
@@ -29,3 +29,6 @@ else
       cd .. # go back one dir
    done
 fi
+
+# 全部匹配失败的时候
+runmake $*
